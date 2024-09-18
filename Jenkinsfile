@@ -17,9 +17,9 @@ pipeline
 					script
 					{
 		 
-    		 anyo = new Date().getYear()
+    		 hoy = new Date()
                 formato = new SimpleDateFormat("yyyy")
-                    anyoConFormato = formato.format(anyo)				
+                    anyoConFormato = formato.format(hoy)				
               
               anyoNacimiento = fechaNacimiento.substring(6)
 	      println "ano nacimiento " + anyoNacimiento
