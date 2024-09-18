@@ -15,10 +15,12 @@ pipeline
 				{
 					script
 					{
-				      def hoy = new Date()
-              def anyo = hoy.getYear()
+				    
+              def anyo = new Date().getYear()
               anyoNacimiento = fechaNacimiento.substring(6)
-              edad = anyo - anyoNacimiento.toInteger()
+	      println "ano nacimiento " + anyoNacimiento
+		println "ano actual " + anyo
+              def edad = anyo.toInteger() - anyoNacimiento.toInteger()
               string_edad = "La edad calculada es: " + edad
 					}
 				}	
