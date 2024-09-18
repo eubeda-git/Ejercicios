@@ -15,12 +15,15 @@ pipeline
 				{
 					script
 					{
-				    
-              def anyo = new Date().getYear()
+		 
+    		 anyo = new Date().getYear()
+                formato = new SimpleDateFormat("yyyy")
+                    anyoConFormato = formato.format(anyo)				
+              
               anyoNacimiento = fechaNacimiento.substring(6)
 	      println "ano nacimiento " + anyoNacimiento
-		println "ano actual " + anyo
-              def edad = anyo.toInteger() - anyoNacimiento.toInteger()
+		println "ano actual " + anyoConFormato
+              def edad = anyoConFormato.toInteger() - anyoNacimiento.toInteger()
               string_edad = "La edad calculada es: " + edad
 					}
 				}	
